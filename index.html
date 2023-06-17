@@ -1,0 +1,1445 @@
+<!Doctype html>
+<Html>
+    <head>
+        <Title>Unit convertor</Title>
+        <style>
+            body{
+                background-image: url(unit-convertor.png);
+                background-size: 800px;
+                font: arial;
+                font-weight: bold;
+                font-size: 50px;
+            }
+            table, td {
+                border: 5px solid transparent;
+                 border-collapse: collapse;
+                 background-color: azure;
+                 opacity: 0.9;
+             }
+             .writting-space{
+               padding: 15px;
+               margin: 15px;
+               background-color: aqua;
+               font-weight: bold;
+               border-radius: 30px;
+             }
+             .select-design{
+                padding-right: 90px;
+                margin-left: 15px;
+                border-radius: 30px;
+                background-color: black;
+                color: aliceblue;
+                padding: 15px;
+                font-weight: bold;
+             }
+             .design-convert{
+               padding: 20px;
+               background-color: blue;
+               color:aliceblue;
+               font-weight: bold;
+               border: none;
+               border-radius: 40px;
+             }
+
+        </style>
+    </head>
+    <body>
+        <h1 align="center">UNIT <br> CONVERTOR</h1>
+        <center>
+            <table>
+        <tr>
+          <td><input placeholder="Input" id="input" class="writting-space" onkeydown="
+            console.log('Typing...');
+            console.log(event.key)
+            if(event.key==='Enter')
+            {
+                process();
+            }"></td>
+       
+         <td><input placeholder="Output" id="output" class="writting-space"></td>
+        </tr> 
+        <tr>
+            <td> <Select id="Inputid" class="select-design">
+         <option value="meter">Meter</option>
+            <option value="millimeter">Millimeter</option>
+            <option value="kilometer">Kilometer</option>
+            <option value="Centimeter">Centimeter</option>
+            <option value="feet">Feet</option>
+            <option value="inches">Inches</option>
+            <option value="miles">Miles</option>
+            <option value="celsius">Celsius</option>
+            <option value="kelvin">Kelvin</option>
+           <option value="fahrenheit">Fahrenheit</option>
+            <option value="kilogram">Kilogram</option>
+            <option value="gram">Gram</option>
+            <option value="pound">Pound</option>
+            <option value="carrot">Carat</option>
+            <option value="hour">Hour</option>
+            <option value="second">Second</option>
+            <option value="minute">Minute</option>
+        </Select>
+         </td>
+         <td>
+         <select id="Outputid" class="select-design">
+            <option value="meter">Meter</option>
+            <option value="millimeter">Millimeter</option>
+            <option value="kilometer">Kilometer</option>
+            <option value="Centimeter">Centimeter</option>
+            <option value="feet">Feet</option>
+            <option value="inches">Inches</option>
+            <option value="miles">Miles</option>
+            <option value="celsius">Celsius</option>
+            <option value="kelvin">Kelvin</option>
+           <option value="fahrenheit">Fahrenheit</option>
+            <option value="kilogram">Kilogram</option>
+            <option value="gram">Gram</option>
+            <option value="pound">Pound</option>
+            <option value="carrot">Carat</option>
+            <option value="hour">Hour</option>
+            <option value="second">Second</option>
+            <option value="minute">Minute</option>
+         </select>
+         </td></tr>
+        <tr><td colspan="2"><center><button onclick="process()" class="design-convert" >Convert</button></td></tr> 
+    <script>
+         var input= document.getElementById('input');
+         var output= document.getElementById('output');
+         var inputid= document.getElementById('Inputid');
+         var outputid= document.getElementById('Outputid');
+        
+
+        function process(){
+            var inputValue = inputid.value;
+            var outputValue= outputid.value;
+
+            if(inputValue === "meter" && outputValue==="kilometer"){
+        
+        output.value = Number(input.value)*0.001;
+        }else if(inputValue === "meter" && outputValue==="Centimeter"){
+    
+        output.value = Number(input.value) * 100;
+        }
+        else if(inputValue === "meter" && outputValue==="millimeter"){
+        
+            output.value = Number(input.value) *1000;
+            }
+        else if(inputValue === "meter" && outputValue==="feet"){
+        
+            output.value = Number(input.value) * 3.28084;
+        }
+        else if(inputValue === "meter" && outputValue==="inches"){
+        
+            output.value = Number(input.value) * 39.3701;
+        }
+        else if(inputValue === "meter" && outputValue==="miles"){
+        
+            output.value = Number(input.value) * 0.0006213689;
+        }
+            else if(inputValue === "meter" && outputValue==="meter")
+        { 
+        output.value = input.value
+        }
+        else if(inputValue === "meter" && outputValue==="celsius")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "meter" && outputValue==="fahrenheit")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "meter" && outputValue==="kelvin")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "meter" && outputValue==="kilogram")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "meter" && outputValue==="gram")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "meter" && outputValue==="pound")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "meter" && outputValue==="carrot")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "meter" && outputValue==="minute")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "meter" && outputValue==="hour")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "meter" && outputValue==="second")
+        { 
+        output.value = 'Sorry value not found';
+        }
+
+        if(inputValue === "kilometer" && outputValue ==="meter")
+        {
+        
+         output.value = Number(input.value) * 1000;
+        }
+        else if(inputValue === "kilometer" && outputValue==="Centimeter")
+        {
+        
+        output.value = Number(input.value)*100000;
+        }
+        else if(inputValue === "kilometer" && outputValue==="millimeter")
+        {
+        
+        output.value = Number(input.value)*1000000;
+        }
+        else if(inputValue === "kilometer" && outputValue==="feet")
+        {
+        
+        output.value = Number(input.value)*3280.84;
+        }
+        else if(inputValue === "kilometer" && outputValue==="inches")
+        {
+        
+        output.value = Number(input.value)*39370.1;
+        }
+        else if(inputValue === "kilometer" && outputValue==="miles")
+        {
+        
+        output.value = Number(input.value)*0.6213688756;
+        }
+        else if(inputValue === "kilometer" && outputValue==="kilometer")
+        {
+       
+        output.value = input.value
+        }
+        else if(inputValue === "kilometer" && outputValue==="celsius")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kilometer" && outputValue==="fahrenheit")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kilometer" && outputValue==="kelvin")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kilometer" && outputValue==="kilogram")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kilometer" && outputValue==="gram")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kilometer" && outputValue==="pound")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kilometer" && outputValue==="carrot")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kilometer" && outputValue==="minute")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kilometer" && outputValue==="hour")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kilometer" && outputValue==="second")
+        { 
+        output.value = 'Sorry value not found';
+        }
+
+        if(inputValue === "Centimeter" && outputValue- "meter")
+        {
+        
+         output.value = Number(input.value) * 0.01;
+        }
+        else if(inputValue === "Centimeter" && outputValue==="kilometer")
+        {
+        
+        output.value = Number(input.value)*0.00001;
+        }
+        else if(inputValue === "Centimeter" && outputValue==="millimeter")
+        {
+        
+        output.value = Number(input.value)*10;
+        }
+        else if(inputValue === "Centimeter" && outputValue==="feet")
+        {
+        
+        output.value = Number(input.value)*0.0328084;
+        }
+        else if(inputValue === "Centimeter" && outputValue==="inches")
+        {
+        
+        output.value = Number(input.value)*0.393701;
+        }
+        else if(inputValue === "Centimeter" && outputValue==="miles")
+        {
+        
+        output.value = Number(input.value)*0.0000062137;
+        }
+        else if(inputValue === "Centimeter" && outputValue==="Centimeter")
+        {
+        
+        output.value = input.value
+        }
+        else if(inputValue === "Centimeter" && outputValue==="celsius")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "Centimeter" && outputValue==="fahrenheit")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "Centimeter" && outputValue==="kelvin")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "Centimeter" && outputValue==="kilogram")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "Centimeter" && outputValue==="gram")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "Centimeter" && outputValue==="pound")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "Centimeter" && outputValue==="carrot")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "Centimeter" && outputValue==="minute")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "Centimeter" && outputValue==="hour")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "Centimeter" && outputValue==="second")
+        { 
+        output.value = 'Sorry value not found';
+        }
+
+        if(inputValue === "feet" && outputValue ==="meter")
+        {
+        
+         output.value = Number(input.value) * 0.3048;
+        }
+        else if(inputValue === "feet" && outputValue==="Centimeter")
+        {
+        
+        output.value = Number(input.value)*30.48;
+        }
+        else if(inputValue === "feet" && outputValue==="millimeter")
+        {
+        
+        output.value = Number(input.value)*304.8;
+        }
+        else if(inputValue === "feet" && outputValue==="kilometer")
+        {
+        
+        output.value = Number(input.value)*0.0003048;
+        }
+        else if(inputValue === "feet" && outputValue==="inches")
+        {
+        
+        output.value = Number(input.value)*12;
+        }
+        else if(inputValue === "feet" && outputValue==="miles")
+        {
+        
+        output.value = Number(input.value)*0.0001893932;
+        }
+        else if(inputValue === "feet" && outputValue==="feet")
+        {
+        
+        output.value = input.value
+        }
+        else if(inputValue === "feet" && outputValue==="celsius")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "feet" && outputValue==="fahrenheit")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "feet" && outputValue==="kelvin")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "feet" && outputValue==="kilogram")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "feet" && outputValue==="gram")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "feet" && outputValue==="pound")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "feet" && outputValue==="carrot")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "feet" && outputValue==="minute")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "feet" && outputValue==="hour")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "feet" && outputValue==="second")
+        { 
+        output.value = 'Sorry value not found';
+        }
+
+        if(inputValue === "inches" && outputValue ==="meter")
+        {
+        
+         output.value = Number(input.value) * 0.0254;
+        }
+        else if(inputValue === "inches" && outputValue==="Centimeter")
+        {
+        
+        output.value = Number(input.value)*2.54;
+        }
+        else if(inputValue === "inches" && outputValue==="millimeter")
+        {
+        
+        output.value = Number(input.value)*25.4;
+        }
+        else if(inputValue === "inches" && outputValue==="kilometer")
+        {
+        
+        output.value = Number(input.value)*2.54e-5;
+        }
+        else if(inputValue === "inches" && outputValue==="feet")
+        {
+        
+        output.value = Number(input.value)*0.0833333;
+        }
+        else if(inputValue === "inches" && outputValue==="miles")
+        {
+        
+        output.value = Number(input.value)*0.0000157828;
+        }
+        else if(inputValue === "inches" && outputValue==="inches")
+        {
+        
+        output.value = input.value
+        }
+        else if(inputValue === "inches" && outputValue==="celsius")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "inches" && outputValue==="fahrenheit")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "inches" && outputValue==="kelvin")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "inches" && outputValue==="kilogram")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "inches" && outputValue==="gram")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "inches" && outputValue==="pound")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "inches" && outputValue==="carrot")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "inches" && outputValue==="minute")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "inches" && outputValue==="hour")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "inches" && outputValue==="second")
+        { 
+        output.value = 'Sorry value not found';
+        }
+
+        if(inputValue === "miles" && outputValue ==="meter")
+        {
+        
+         output.value = Number(input.value) * 1609.35;
+        }
+        else if(inputValue === "miles" && outputValue==="Centimeter")
+        {
+        
+        output.value = Number(input.value)*160935;
+        }
+        else if(inputValue === "miles" && outputValue==="millimeter")
+        {
+        
+        output.value = Number(input.value)*1609350;
+        }
+        else if(inputValue === "miles" && outputValue==="kilometer")
+        {
+        
+        output.value = Number(input.value)*1.60935;
+        }
+        else if(inputValue === "miles" && outputValue==="feet")
+        {
+        
+        output.value = Number(input.value)*5280.019685;
+        }
+        else if(inputValue === "miles" && outputValue==="inches")
+        {
+        
+        output.value = Number(input.value)*63360.23622;
+        }
+        else if(inputValue === "miles" && outputValue==="miles")
+        {
+        
+        output.value = input.value
+        }
+        else if(inputValue === "miles" && outputValue==="celsius")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "miles" && outputValue==="fahrenheit")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "miles" && outputValue==="kelvin")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "miles" && outputValue==="kilogram")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "miles" && outputValue==="gram")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "miles" && outputValue==="pound")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "miles" && outputValue==="carrot")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "miles" && outputValue==="minute")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "miles" && outputValue==="hour")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "miles" && outputValue==="second")
+        { 
+        output.value = 'Sorry value not found';
+        }
+
+        if(inputValue === "millimeter" && outputValue ==="meter")
+        {
+        
+         output.value = Number(input.value) * 0.001;
+        }
+        else if(inputValue === "millimeter" && outputValue==="Centimeter")
+        {
+        
+        output.value = Number(input.value)*0.1;
+        }
+        else if(inputValue === "millimeter" && outputValue==="kilometer")
+        {
+        
+        output.value = Number(input.value)*0.000001;
+        }
+        else if(inputValue === "millimeter" && outputValue==="feet")
+        {
+        
+        output.value = Number(input.value)*0.0032808399;
+        }
+        else if(inputValue === "millimeter" && outputValue==="inches")
+        {
+        
+        output.value = Number(input.value)*0.0393700787;
+        }
+        else if(inputValue === "millimeter" && outputValue==="miles")
+        {
+        
+        output.value =  Number(input.value)*6.213688756E-7;
+        }
+        else if(inputValue === "millimeter" && outputValue==="celsius")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "millimeter" && outputValue==="fahrenheit")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "millimeter" && outputValue==="kelvin")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "millimeter" && outputValue==="kilogram")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "millimeter" && outputValue==="gram")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "millimeter" && outputValue==="pound")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "millimeter" && outputValue==="carrot")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === ",illimeter" && outputValue==="minute")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "millimeter" && outputValue==="hour")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "millimeter" && outputValue==="second")
+        { 
+        output.value = 'Sorry value not found';
+        }
+
+        if(inputValue === "celsius" && outputValue ==="kelvin")
+        {
+        
+         output.value = (Number(input.value) + 273.15);
+        }
+        else if(inputValue === "celsius" && outputValue==="fahrenheit")
+        {
+        
+        output.value = (Number(input.value)*0.56) + 32;
+        }
+        else if(inputValue === "celsius" && outputValue==="celsius")
+        {
+        
+       output.value = input.value
+        }
+        else if(inputValue === "celsius" && outputValue==="meter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "celsius" && outputValue==="Centimeter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "celsius" && outputValue==="kilometer")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "celsius" && outputValue==="millimeter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "celsius" && outputValue==="inches")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "celsius" && outputValue==="feet")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "celsius" && outputValue==="miles")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "celsius" && outputValue==="kilogram")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "celsius" && outputValue==="gram")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "celsius" && outputValue==="pound")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "celsius" && outputValue==="carrot")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "celcius" && outputValue==="minute")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "celcius" && outputValue==="hour")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "celcius" && outputValue==="second")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        
+
+        if(inputValue === "kelvin" && outputValue ==="celsius")
+        {
+        
+         output.value = (Number(input.value) - 273.15);
+        }
+        else if(inputValue === "kelvin" && outputValue==="fahrenheit")
+        {
+        
+        output.value = (Number(input.value) - 273.15) * (0.56) + 32;
+        }
+        
+        else if(inputValue === "kelvin" && outputValue==="kelvin")
+        {
+        
+       output.value = input.value
+        }
+        else if(inputValue === "kelvin" && outputValue==="meter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kelvin" && outputValue==="millimeter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kelvin" && outputValue==="Centimeter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kelvin" && outputValue==="kilometer")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kelvin" && outputValue==="inches")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kelvin" && outputValue==="feet")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kelvin" && outputValue==="miles")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kelvin" && outputValue==="kilogram")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kelvin" && outputValue==="gram")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kelvin" && outputValue==="pound")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kelvin" && outputValue==="carrot")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kelvin" && outputValue==="minute")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kelvin" && outputValue==="hour")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kelvin" && outputValue==="second")
+        { 
+        output.value = 'Sorry value not found';
+        }
+
+        if(inputValue === "fahrenheit" && outputValue ==="celsius")
+        {
+        
+         output.value = (Number(input.value) - 32) * (0.56);
+        }
+        else if(inputValue === "fahrenheit" && outputValue==="kelvin")
+        {
+        
+        output.value = (Number(input.value) - 32)*(0.56) + 273.15;
+        }
+        else if(inputValue === "fahrenheit" && outputValue==="fahrenheit")
+        {
+        
+       output.value = input.value
+        }
+        else if(inputValue === "fahrenheit" && outputValue==="meter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "fahrenheit" && outputValue==="Centimeter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "fahrenheit" && outputValue==="millimeter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "fahrenheit" && outputValue==="kilometer")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "fahrenheit" && outputValue==="inches")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "fahrenheit" && outputValue==="feet")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "fahrenheit" && outputValue==="miles")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "fahrenheit" && outputValue==="kilogram")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "fahrenheit" && outputValue==="gram")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "fahrenheit" && outputValue==="pound")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "fahrenheit" && outputValue==="carrot")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "fahrenheit" && outputValue==="minute")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "fahrenheit" && outputValue==="hour")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "fahrenheit" && outputValue==="second")
+        { 
+        output.value = 'Sorry value not found';
+        }
+
+        
+        if(inputValue === "kilogram" && outputValue ==="kilogram")
+        {
+            output.value = input.value
+        }
+        else if(inputValue === "kilogram" && outputValue==="gram")
+        {
+        
+        output.value = Number(input.value)*1000;
+        }
+        else if(inputValue === "kilogram" && outputValue==="pound")
+        {
+        
+       output.value = Number(input.value)*2.2046244202;
+        }
+        else if(inputValue === "kilogram" && outputValue==="carrot")
+        {
+            output.value = Number(input.value)*5000;
+        }
+        else if(inputValue === "kilogram" && outputValue==="celcius")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kilogram" && outputValue==="kelvin")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kilogram" && outputValue==="fahrenheit")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kilogram" && outputValue==="meter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kilogram" && outputValue==="Centimeter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kilogram" && outputValue==="millimeter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kilogram" && outputValue==="kilometer")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kilogram" && outputValue==="inches")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kilogram" && outputValue==="feet")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kilogram" && outputValue==="miles")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kilogram" && outputValue==="minute")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kilogram" && outputValue==="hour")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "kilogram" && outputValue==="second")
+        { 
+        output.value = 'Sorry value not found';
+        }
+
+
+        if(inputValue === "gram" && outputValue ==="gram")
+        {
+            output.value = input.value
+        }
+        else if(inputValue === "gram" && outputValue==="kilogram")
+        {
+        
+        output.value = Number(input.value)*0.001;
+        }
+        else if(inputValue === "gram" && outputValue==="pound")
+        {
+        
+       output.value = Number(input.value)*0.0022046244;
+        }
+        else if(inputValue === "gram" && outputValue==="carrot")
+        {
+            output.value = Number(input.value)*5;
+        }
+        else if(inputValue === "gram" && outputValue==="celcius")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "gram" && outputValue==="kelvin")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "gram" && outputValue==="fahrenheit")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "gram" && outputValue==="meter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "gram" && outputValue==="Centimeter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "gram" && outputValue==="millimeter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "gram" && outputValue==="kilometer")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "gram" && outputValue==="inches")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "gram" && outputValue==="feet")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "gram" && outputValue==="miles")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "gram" && outputValue==="minute")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "gram" && outputValue==="hour")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "gram" && outputValue==="second")
+        { 
+        output.value = 'Sorry value not found';
+        }
+
+
+        if(inputValue === "pound" && outputValue ==="pound")
+        {
+            output.value = input.value
+        }
+        else if(inputValue === "pound" && outputValue==="kilogram")
+        {
+        
+        output.value = Number(input.value)*0.453592;
+        }
+        else if(inputValue === "pound" && outputValue==="gram")
+        {
+        
+       output.value = Number(input.value)*453.592;
+        }
+        else if(inputValue === "pound" && outputValue==="carrot")
+        {
+            output.value = Number(input.value)*2267.96;
+        }
+        else if(inputValue === "pound" && outputValue==="celcius")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "pound" && outputValue==="kelvin")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "pound" && outputValue==="fahrenheit")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "pound" && outputValue==="meter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "pound" && outputValue==="Centimeter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "pound" && outputValue==="millimeter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "pound" && outputValue==="kilometer")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "pound" && outputValue==="inches")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "pound" && outputValue==="feet")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "pound" && outputValue==="miles")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "pound" && outputValue==="minute")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "pound" && outputValue==="hour")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "pound" && outputValue==="second")
+        { 
+        output.value = 'Sorry value not found';
+        }
+
+        
+        if(inputValue === "carrot" && outputValue ==="carrot")
+        {
+            output.value = input.value
+        }
+        else if(inputValue === "carrot" && outputValue==="kilogram")
+        {
+        
+        output.value = Number(input.value)*0.0002;
+        }
+        else if(inputValue === "carrot" && outputValue==="gram")
+        {
+        
+       output.value = Number(input.value)*0.2;
+        }
+        else if(inputValue === "carrot" && outputValue==="pound")
+        {
+            output.value = Number(input.value)*0.0004409249;
+        }
+        else if(inputValue === "carrot" && outputValue==="celcius")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "carrot" && outputValue==="kelvin")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "carrot" && outputValue==="fahrenheit")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "carrot" && outputValue==="meter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "carrot" && outputValue==="Centimeter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "carrot" && outputValue==="millimeter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "carrot" && outputValue==="kilometer")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "carrot" && outputValue==="inches")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "carrot" && outputValue==="feet")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "carrot" && outputValue==="miles")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "carrot" && outputValue==="minute")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "carrot" && outputValue==="hour")
+        { 
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "carrot" && outputValue==="second")
+        { 
+        output.value = 'Sorry value not found';
+        }
+
+
+        if(inputValue === "second" && outputValue ==="second")
+        {
+            output.value = input.value
+        }
+        else if(inputValue === "second" && outputValue ==="minute")
+        {
+            output.value = Number(input.value)*0.0166666667;
+        }
+        else if(inputValue === "second" && outputValue ==="hour")
+        {
+            output.value = Number(input.value)*0.002777778;
+        }
+        else if(inputValue === "second" && outputValue ==="carrot")
+        {
+            output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "second" && outputValue==="kilogram")
+        {
+            output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "second" && outputValue==="gram")
+        {
+        
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "second" && outputValue==="pound")
+        {
+            output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "second" && outputValue==="celcius")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "second" && outputValue==="kelvin")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "second" && outputValue==="fahrenheit")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "second" && outputValue==="meter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "second" && outputValue==="Centimeter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "second" && outputValue==="millimeter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "second" && outputValue==="kilometer")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "second" && outputValue==="inches")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "second" && outputValue==="feet")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "second" && outputValue==="miles")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+
+        if(inputValue === "hour" && outputValue ==="hour")
+        {
+            output.value = input.value
+        }
+        else if(inputValue === "hour" && outputValue ==="minute")
+        {
+            output.value = Number(input.value)*60;
+        }
+        else if(inputValue === "hour" && outputValue ==="second")
+        {
+            output.value = Number(input.value)*3600;
+        }
+        else if(inputValue === "hour" && outputValue ==="carrot")
+        {
+            output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "hour" && outputValue==="kilogram")
+        {
+            output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "hour" && outputValue==="gram")
+        {
+        
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "hour" && outputValue==="pound")
+        {
+            output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "hour" && outputValue==="celcius")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "hour" && outputValue==="kelvin")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "hour" && outputValue==="fahrenheit")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "hour" && outputValue==="meter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "hour" && outputValue==="Centimeter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "hour" && outputValue==="millimeter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "hour" && outputValue==="kilometer")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "hour" && outputValue==="inches")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "hour" && outputValue==="feet")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "hour" && outputValue==="miles")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+
+        if(inputValue === "minute" && outputValue ==="minute")
+        {
+            output.value = input.value
+        }
+        else if(inputValue === "minute" && outputValue ==="hour")
+        {
+            output.value = Number(input.value)*0.0166666667;
+        }
+        else if(inputValue === "minute" && outputValue ==="second")
+        {
+            output.value = Number(input.value)*60;
+        }
+        else if(inputValue === "minute" && outputValue ==="carrot")
+        {
+            output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "minute" && outputValue==="kilogram")
+        {
+            output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "minute" && outputValue==="gram")
+        {
+        
+        output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "minute" && outputValue==="pound")
+        {
+            output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "minute" && outputValue==="celcius")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "minute" && outputValue==="kelvin")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "minute" && outputValue==="fahrenheit")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "minute" && outputValue==="meter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "minute" && outputValue==="Centimeter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "minute" && outputValue==="millimeter")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "minute" && outputValue==="kilometer")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "minute" && outputValue==="inches")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "minute" && outputValue==="feet")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        else if(inputValue === "minute" && outputValue==="miles")
+        {
+        
+       output.value = 'Sorry value not found';
+        }
+        }
+
+    </script>
+    </body>
+</Html>
